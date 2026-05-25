@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LORE WARHAMMER40K</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* RESET y ESTILOS BASE */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* IMAGEN DE FONDO PARA TODO EL SITIO */
+        body {
+            background-image: url('https://i.redd.it/mv54pozmxj371.jpg');
+            background-size: cover;
+            background-position: center center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            font-family: 'Arial', 'Segoe UI', system-ui, sans-serif;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        /* Capa oscura sobre el fondo para mejorar legibilidad (opcional) */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.55);
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        /* RECUADRO NEGRO PRINCIPAL - similar a la imagen que mandaste */
+        .black-box {
+            position: relative;
+            z-index: 2;
+            max-width: 600px;
+            width: 90%;
+            margin: 2rem auto;
+            background-color: #000000; /* Negro sólido */
+            border-radius: 1.5rem;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(255, 255, 255, 0.05) inset;
+            overflow: hidden;
+            backdrop-filter: blur(0px);
+        }
+
+        /* Contenido interior del recuadro negro */
+        .black-box-content {
+            padding: 1.8rem 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+
+        /* Texto dentro del recuadro negro */
+        .black-box-content,
+        .black-box-content * {
+            color: #f0f0f0;
+        }
+
+        /* Estilo para elementos dentro del recuadro (títulos, párrafos, etc) */
+        .black-box h1, 
+        .black-box h2, 
+        .black-box h3 {
+            color: #ffffff;
+            margin-bottom: 0.5rem;
+        }
+
+        .black-box p {
+            color: #d0d0d0;
+            line-height: 1.5;
+            margin-bottom: 1rem;
+        }
+
+        /* Ejemplo de área para imágenes dentro del recuadro negro */
+        .content-image {
+            width: 100%;
+            border-radius: 1rem;
+            margin: 0.5rem 0;
+            border: 1px solid #2a2a2a;
+        }
+
+        /* Grid para organizar contenido (ejemplo) */
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+
+        .image-card {
+            background: #111111;
+            border-radius: 0.8rem;
+            padding: 0.5rem;
+            text-align: center;
+            border: 1px solid #2c2c2c;
+            transition: transform 0.2s;
+        }
+
+        .image-card:hover {
+            transform: translateY(-3px);
+            background: #1a1a1a;
+        }
+
+        .image-card img {
+            width: 100%;
+            border-radius: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .image-card span {
+            font-size: 0.8rem;
+            color: #cccccc;
+        }
+
+        /* Separador estilizado */
+        .divider {
+            height: 2px;
+            background: linear-gradient(90deg, #333, #666, #333);
+            margin: 0.8rem 0;
+        }
+
+        /* Ajustes para el header existente (sin modificarlo) */
+        header {
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Asegurar que tu menú se vea bien sobre el fondo */
+        .menu.container, .navbar, .logo {
+            position: relative;
+            z-index: 3;
+        }
+
+        /* Pequeños ajustes para tu menú existente */
+        .logo {
+            color: white !important;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .navbar ul li a {
+            color: white !important;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .black-box-content {
+                padding: 1.2rem;
+            }
+            .image-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="content">
+        <div class="menu container">
+            <a href="#" class="logo">ricon muchachos</a>    
+            <input type="checkbox" id="menu" />
+            <label for="menu">
+                <img class="menu-icono" src="images/menu.png" alt="">
+            </label>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="menu.html">menu</a></li>
+                    <li><a href="YUC_FACCIONES.HTML">Facciones</a></li>
+                    <li><a href="JASS_PRIMARCAS.HTML">Primarcas</a></li> 
+                    <li><a href="EDLCC_ASTARTES.HTML">Astartes</a></li>
+                    <li><a href="AJS_LEGIONES_RELEVANTES.HTML">Legiones Relevantes</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<!-- RECUADRO NEGRO - Aquí puedes colocar TODO tu contenido e imágenes -->
+<div class="black-box">
+    <div class="black-box-content">
+        
+        <!-- Título de ejemplo -->
+        <h1>⚔️ Warhammer 40.000 ⚔️</h1>
+        <p>En el oscuro futuro del 41º Milenio, solo hay guerra. Este es tu espacio para explorar las facciones, los primarcas, los Astartes y las legiones más relevantes del universo de Games Workshop.</p>
+        
+        <div class="divider"></div>
+        
+        <!-- Aquí puedes poner IMÁGENES y contenido extra -->
+        <h2><i class="fas fa-skull"></i> Contenido destacado</h2>
+        <p>Las legiones de Astartes son los guerreros más letales del Imperio. Cada capítulo tiene su propia historia y herejías.</p>
+        
+        <!-- Ejemplo de grid para imágenes (cámbialas por las tuyas) -->
+        <div class="image-grid">
+            <div class="image-card">
+                <img src="https://images.unsplash.com/photo-1559127251-d9616dbf6bf3?q=80&w=500&auto=format" alt="Warhammer marine" style="height: 120px; object-fit: cover;">
+                <span>Marines Espaciales</span>
+            </div>
+            <div class="image-card">
+                <img src="https://images.unsplash.com/photo-1532767153582-b1a0e5145009?q=80&w=500&auto=format" alt="Caos" style="height: 120px; object-fit: cover;">
+                <span>Fuerzas del Caos</span>
+            </div>
+            <div class="image-card">
+                <img src="https://images.unsplash.com/photo-1506701160839-34cfdecaf53c?q=80&w=500&auto=format" alt="Imperio" style="height: 120px; object-fit: cover;">
+                <span>El Imperio</span>
+            </div>
+        </div>
+        
+        <div class="divider"></div>
+        
+        <!-- Espacio para más texto o contenido interactivo -->
+        <h3>📖 Sobre las Legiones</h3>
+        <p>Los Lobos Lunares, los Ultramarines, los Puños Imperiales... cada legión forjó el destino de la galaxia. Explora sus secretos a través de los enlaces del menú superior.</p>
+        
+        <p style="font-size: 0.85rem; color: #999; text-align: center; margin-top: 1rem;">
+            ⚙️ "En la grim oscuridad del futuro, solo hay guerra" ⚙️
+        </p>
+    </div>
+</div>
+
+<!-- Opcional: Footer o información extra (puedes quitarlo si no lo necesitas) -->
+<div style="position: relative; z-index: 2; text-align: center; padding: 1rem; color: rgba(255,255,255,0.6); font-size: 0.7rem;">
+    <span>Warhammer 40k Fan Site • El conocimiento es poder • Cuídalo bien</span>
+</div>
+
+</body>
+</html>

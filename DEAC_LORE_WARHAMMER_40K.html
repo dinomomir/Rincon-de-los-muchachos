@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LORE WARHAMMER40K</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* RESET y ESTILOS BASE */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* IMAGEN DE FONDO PARA TODO EL SITIO */
+        body {
+            background-image: url('https://i.redd.it/mv54pozmxj371.jpg');
+            background-size: cover;
+            background-position: center center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            font-family: 'Times New Roman', 'serif';
+            min-height: 100vh;
+            position: relative;
+        }
+
+        /* Capa oscura sobre el fondo para mejorar legibilidad (opcional) */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.55);
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        /* RECUADRO NEGRO PRINCIPAL - similar a la imagen que mandaste */
+        .black-box {
+            position: relative;
+            z-index: 2;
+            max-width: 600px;
+            width: 90%;
+            margin: 2rem auto;
+            background-color: #000000; /* Negro sólido */
+            border-radius: 1.5rem;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(255, 255, 255, 0.05) inset;
+            overflow: hidden;
+            backdrop-filter: blur(0px);
+        }
+
+        /* Contenido interior del recuadro negro */
+        .black-box-content {
+            padding: 1.8rem 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+
+        /* Texto dentro del recuadro negro */
+        .black-box-content,
+        .black-box-content * {
+            color: #f0f0f0;
+        }
+
+        /* Estilo para elementos dentro del recuadro (títulos, párrafos, etc) */
+        .black-box h1, 
+        .black-box h2, 
+        .black-box h3 {
+            color: #ffffff;
+            margin-bottom: 0.5rem;
+        }
+
+        .black-box p {
+            color: #d0d0d0;
+            line-height: 1.5;
+            margin-bottom: 1rem;
+        }
+
+        /* Ejemplo de área para imágenes dentro del recuadro negro */
+        .content-image {
+            width: 100%;
+            border-radius: 1rem;
+            margin: 0.5rem 0;
+            border: 1px solid #2a2a2a;
+        }
+
+        /* Grid para organizar contenido (ejemplo) */
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+
+        .image-card {
+            background: #111111;
+            border-radius: 0.8rem;
+            padding: 0.5rem;
+            text-align: center;
+            border: 1px solid #2c2c2c;
+            transition: transform 0.2s;
+        }
+
+        .image-card:hover {
+            transform: translateY(-3px);
+            background: #1a1a1a;
+        }
+
+        .image-card img {
+            width: 100%;
+            border-radius: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .image-card span {
+            font-size: 0.8rem;
+            color: #cccccc;
+        }
+
+        /* Separador estilizado */
+        .divider {
+            height: 2px;
+            background: linear-gradient(90deg, #333, #666, #333);
+            margin: 0.8rem 0;
+        }
+
+        /* Ajustes para el header existente (sin modificarlo) */
+        header {
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Asegurar que tu menú se vea bien sobre el fondo */
+        .menu.container, .navbar, .logo {
+            position: relative;
+            z-index: 3;
+        }
+
+        /* Pequeños ajustes para tu menú existente */
+        .logo {
+            color: white !important;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .navbar ul li a {
+            color: white !important;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .black-box-content {
+                padding: 1.2rem;
+            }
+            .image-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="content">
+        <div class="menu container">
+            <a href="#" class="logo">ricon muchachos</a>    
+            <input type="checkbox" id="menu" />
+            <label for="menu">
+                <img class="menu-icono" src="images/menu.png" alt="">
+            </label>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="YUC_FACCIONES.HTML">Facciones</a></li>
+                    <li><a href="JASS_PRIMARCAS.HTML">Primarcas</a></li> 
+                    <li><a href="EDLCC_ASTARTES.HTML">Astartes</a></li>
+                    <li><a href="AJS_LEGIONES_RELEVANTES.HTML">Legiones Relevantes</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<div class="black-box">
+    <div class="black-box-content">
+        
+       
+        <h1>⚔️ Warhammer 40.000 ⚔️</h1>
+        <p>En el oscuro futuro del 41º Milenio, solo hay guerra. En este apartado podras conocer parte de la extensa historia que abarca el universo de warhammer 40k, esperamos sea de tu agrado.</p>
+        
+        <div class="divider"></div>
+        
+       
+        <h2>Introducción</h2>
+        <p>Warhammer 40,000 es un universo de ciencia ficción oscura y despiadada, creado por Games Workshop. La acción transcurre en el 41º Milenio, donde la humanidad lucha por sobrevivir en una galaxia sumida en la guerra eterna.</p>
+        <p>El Imperio de la Humanidad, gobernado por el místico Emperador de la Humanidad (actualmente postrado en el Trono Dorado tras ser herido por su hijo traidor Horus), se enfrenta a enemigos por todas partes: demonios del Caos, alienígenas devoradores de mundos (como los Tiránidos o los T'au), Orkos sedientos de pelea, Eldars decadentes y los Necrones de tecnología ancestral.</p>
+        <p>Los Marines Espaciales (Astartes) son los guerreros de élite del Imperio, creados a partir de 20 legiones originales. Nueve de ellas traicionaron al Emperador durante la Herejía de Horus, dando origen a las fuerzas del Caos. Ahora, en el presente del lore, el Primarca Roboute Guilliman ha regresado para liderar lo que queda de la humanidad en una cruzada desesperada.</p>
+        
+        
+        <div style="text-align: center; margin: 0.5rem 0;">
+            <img src="images/Warhammer-Logo-Vector.svg-.png" style="height: 110px; object-fit: cover;" alt="Warhammer logo">
+        </div>
+        
+        <div class="divider"></div>
+        
+     
+        <h3>La Era de los Dioses (antes del 1º Milenio)</h3>
+        <p>Los Ancestrales (Old Ones), una raza reptiliana ultratecnológica, dominan la galaxia. Crean a los Eldar, los Korks (proto-Orkos) y otras especies para que les sirvan. Sus enemigos, los Necrontyr (humanoides de piel metálica), hacen un pacto con entidades devoradoras de estrellas llamadas C'tan, transformándose en los Necrones inmortales. Estalla la Guerra del Cielo. Los Ancestrales son aniquilados. Los Necrones, tras ganar, traicionan y fragmentan a los C'tan, y luego entran en letargo durante 60 millones de años.</p>
+        
+        
+        <div style="text-align: center; margin: 0.8rem 0;">
+            <img src="images/izg0lyh0m3ub1.jpg" style="max-width: 80%; height: auto; border-radius: 0.8rem;" alt="Ilustración Warhammer">
+        </div>
+        
+        <div class="divider"></div>
+
+       
+        <h3>La Era Dorada de la Humanidad (15º al 25º Milenio)</h3>
+        <p>La humanidad se expande por la galaxia gracias a la tecnología del Motor de Disformidad (viaje interestelar). Nace la Federación Humana. Se crean los Hombres de Piedra (inteligencias artificiales básicas) y los Hombres de Hierro (IA avanzadas). Todo es prosperidad y ciencia.</p>
+            <div style="text-align: center; margin: 0.8rem 0;">
+                <img src="images/era dorada.jpg" style="max-width: 80%; height: auto; border-radius: 0.8rem;" alt="Ilustración Warhammer">
+            </div>
+        <div class="divider"></div>
+        
+       
+        <h3>La Era de los Conflictos (25º al 30º Milenio)</h3>
+        <p>Las Inteligencias Artificiales (Hombres de Hierro) se rebelan contra sus creadores. Guerra civil apocalíptica. La humanidad casi se extingue. La Disformidad se vuelve turbulenta por el nacimiento de Slaanesh, aislando los mundos humanos entre sí. Caos, guerras y colapso total.</p>
+        
+        <div syle="text-align: center; margin: 0.8rem 0;">
+            <img src="images/7241c130-c778-4cdc-9d62-2431f91c2094.jpg" style="max-width: 80%; height: auto; border-radius: 0.8rem;" alt="Ilustración Warhammer">
+        </div>
+
+
+        <div class="divider"></div>
+        
+      
+        <h3>La Caída de los Eldar (30º Milenio)</h3>
+        <p>Los Eldar, aburridos y arrogantes tras millones de años de dominio, se entregan al hedonismo más extremo. Sus depravaciones acumuladas en la Disformidad cobran vida y nace Slaanesh, el dios del Caos del exceso. La explosión psíquica devora el 99% de los Eldar y abre la Cicatriz del Maelstrom (Eye of Terror). Los Eldar sobrevivientes huyen en astronaves mundo (Craftworlds) o se refugian en la telaraña (Drukhari).</p>
+         <div style="text-align: center; margin: 0.8rem 0;">
+            <img src="images/caida de los eldar.jpg" style="max-width: 80%; height: auto; border-radius: 0.8rem;" alt="Eldar Warhammer">
+        </div>
+        <div class="divider"></div>
+        
+        <h3>El Emperador y la Unificación de Terra (30º Milenio)</h3>
+        <p>En la Tierra devastada por la guerra, un ser inmortal conocido como el Emperador de la Humanidad emerge de las sombras. Con sus Custodes y los primeros Marines Espaciales (Astartes) creados a partir de su propio ADN, conquista todo el planeta y luego la Luna y Marte. Alianza con el Mechanicum de Marte.</p>
+        <div style="text-align: center; margin: 0.8rem 0;">
+            <img src="images/emperador lol.jpg" style="max-width: 80%; height: auto; border-radius: 0.8rem;" alt="Emperador Warhammer">
+        </div>
+        <div class="divider"></div>
+
+        <h3>La Gran Cruzada y la creación de los Primarcas (30º Milenio)</h3>
+        <p>El Emperador crea 20 hijos genéticamente perfectos: los Primarcas. Pero los dioses del Caos los dispersan por la galaxia cuando son bebés. El Emperador recupera a cada uno y les da el mando de sus propias Legiones de Marines Espaciales (20 legiones, cada una de unos 100.000 guerreros). Lanzan la Gran Cruzada para reunificar toda la humanidad bajo el Imperio.</p>
+        <div style="text-align: center; margin: 0.8rem 0;">
+            <img src="images/PRIMARCAS.jpg" style="max-width: 80%; height: auto; border-radius: 0.8rem;" alt="Primarcas Warhammer">
+        </div>
+        <div class="divider"></div>
+
+        <h3>La Herejía de Horus (005-014 del 31º Milenio)</h3>
+        <p>Horus Lupercal, el Primarca más querido por el Emperador (Lobos Lunares), es corrompido por los dioses del Caos mientras se recupera de una herida. Manipula a otros Primarcas para rebelarse. La mitad de las legiones se vuelven traidoras. Guerra civil galáctica. El Emperador regresa a Terra para la batalla final. Horus mata a Sanguinius (Ángeles Sangrientos) y hiere mortalmente al Emperador, pero el Emperador destruye el alma de Horus. El Emperador es puesto en el Trono Dorado, un mecanismo que mantiene su cuerpo medio vivo y alimenta el faro astronómico. Los leales sobreviven (Ultramarines, Lobos Espaciales, Puños Imperiales, etc.). Los traidores huyen al Ojo del Terror.s</p>
+        <div style="text-align: center; margin: 0.8rem 0;">
+            <img src="images/herejia de horus.jpg" style="max-width: 80%; height: auto; border-radius: 0.8rem;" alt="Horus Warhammer">
+        </div>
+        <div class="divider"></div>
+
+        <h3>El Imperio en decadencia (31º al 40º Milenio)</h3>
+        <p>El Imperio se vuelve teocrático y ultraconservador. La Inquisición caza herejes. Los Marines Espaciales se fragmentan en Capítulos de 1.000 guerreros por el Códex Astartes de Guilliman. Aparecen nuevas amenazas: los Tiránidos (mente colmena que devora mundos), los T'au (raza joven tecnológica con el bien mayor), los Necrones despiertan de sus tumbas, y los Orkos se multiplican. Caos lanza 13 Cruzadas Negras.</p>
+        <div style="text-align: center; margin: 0.8rem 0;">
+            <img src="images/imperio.jpg" style="max-width: 80%; height: auto; border-radius: 0.8rem;" alt="Decadencia Warhammer">
+        </div>
+        <div class="divider"></div>
+
+        <h3>La Caída de Cadia y la Gran Fisura (41º Milenio)</h3>
+        <p>Abaddon el Saqueador (sucesor de Horus) lanza la 13ª Cruzada Negra. Destruye el mundo fortaleza de Cadia haciendo caer una nave estación espacial. La protección que contenía al Ojo del Terror colapsa. Nace la Cicatriz de la Herejía, una fisura disforme que parte la galaxia en dos. Mitad Imperio queda a oscuras sin el faro astronómico.</p>
+        <div style="text-align: center; margin: 0.8rem 0;">
+            <img src="images/caida de cadia.jpg" style="max-width: 80%; height: auto; border-radius: 0.8rem;" alt="Cadia Warhammer">
+        </div>
+        <div class="divider"></div>
+
+        <h3>Era Indomitus y el regreso de Guilliman (finales del 41º Milenio - actualidad)</h3>
+        <p>Los sacerdotes del Trono Dorado resucitan a Roboute Guilliman (Primarca de los Ultramarines), quien estaba en un campo de estasis desde la Herejía. Guilliman se convierte en Lord Regente del Imperio. Crea a los Marines Primaris (Astartes mejorados). Lanza la Cruzada Indomitus para retomar los mundos perdidos. Guilliman se enfrenta a los dioses del Caos y descubre que el Emperador ya no es solo un hombre, sino un dios en potencia dentro de la Disformidad. El Imperio sigue en guerra eterna.</p>
+        <div style="text-align: center; margin: 0.8rem 0;">
+            <img src="images/Captura de pantalla 2026-05-24 212554.png" style="max-width: 80%; height: auto; border-radius: 0.8rem;" alt="Guilliman Warhammer">
+        </div>
+            <div class="divider"></div>
+
+
+    </div>
+</div>
+    </div>
+</div>
+</body>
+</html>
